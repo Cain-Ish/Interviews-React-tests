@@ -11,7 +11,9 @@ class Task extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://my-json-server.typicode.com/Cain-Ish/demo/profile")
+    const db =
+      "https://my-json-server.typicode.com/Cain-Ish/Interviews-React-tests";
+    fetch(db + "/profile")
       .then(response => response.json())
       .then(json => this.setState({ user: json }));
   }

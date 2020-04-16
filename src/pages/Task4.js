@@ -1,5 +1,5 @@
 // Create simple ToDo list.
-// 1. Fetch data from https://my-json-server.typicode.com/Cain-Ish/demo/todos
+// 1. Fetch data from https://my-json-server.typicode.com/Cain-Ish/Interviews-React-tests/todos
 // Data structure: [
 //   {
 //     "userId": number,
@@ -23,9 +23,7 @@ class Task extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch(
-      "https://my-json-server.typicode.com/Cain-Ish/demo/todos"
-    );
+    const res = await fetch("todos");
     const json = await res.json();
     this.setState({ todos: json });
   }
